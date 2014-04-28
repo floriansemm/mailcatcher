@@ -2,7 +2,8 @@
     "require": {
         "silex/silex": "~1.2",
         "twig/twig": ">=1.8,<2.0-dev",
-        "doctrine/dbal": "2.5.*@dev"
+        "doctrine/dbal": "2.5.*@dev",
+        "floriansemm/official-library-php-email-parser": "dev-master"
     }
 }
 
