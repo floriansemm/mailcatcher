@@ -12,5 +12,15 @@ $connectionParams = array(
     'path' => __DIR__ .'/mailcatcher.sqlite',
     'driver' => 'pdo_sqlite',
 );
+
+$parser = new PlancakeEmailParser($message);
+
+
 $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
-$conn->insert('raw_mail', array('raw_mail_content' => $message));
+
+$conn->insert('sent_mails', array(
+    'sender'    => 'localhost',
+    'recipient' => implode(', ', $parser->getTo()),
+    'subject'   => $parser->getSubject(),
+    'content'   => $parser->getHTMLBody()
+));
