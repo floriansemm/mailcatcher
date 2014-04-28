@@ -64,16 +64,15 @@
                     </tr>
                     </thead>
                     <tbody>
-                        {% for mail in mails %}
-                            <tr>
-
-                            <td></td>
-                            <td>{{ mail.recipient }}</td>
-                            <td>{{ mail.subject }}</td>
-                            <td>{{ mail.content }}</td>
-                            <td>{{ mail.sent }}</td>
-                            </tr>
-                        {% endfor %}
+                    {% for mail in mails %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ mail.recipient }}</td>
+                        <td>{{ mail.subject }}</td>
+                        <td>{{ mail.content }}</td>
+                        <td>{{ mail.sent }}</td>
+                    </tr>
+                    {% endfor %}
 
                     </tbody>
                 </table>
