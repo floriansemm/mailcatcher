@@ -12,6 +12,8 @@ This app should solve a couple of your problems:
 - easy setup
 - fancy shiny GUI
 
+Mailcatcher is written in PHP with Silex and Doctrine2.
+
 Installation
 ============
 
@@ -24,4 +26,5 @@ sendmail_path = /path/to/mailcatcher/app/client.php
 4. make `bin/start_server` executable
 5. start the app `./bin/start_server` (needs PHP5.4)
 
-For PHP5.3 you have to create a vhost in webserver configuration. The document root must be `web`.
+For PHP5.3 you have to create a vhost in your webserver configuration. The document root must be `web`.
+
