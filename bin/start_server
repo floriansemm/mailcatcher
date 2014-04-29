@@ -6,4 +6,14 @@ if [ $? != 0 ] ; then
     exit 1
 fi
 
-$PHP -S localhost:8080 -t web web/index.php
+SCRIPT_DIR=`dirname "$(readlink -f $0)"`;
+
+DB_FILE="$SCRIPT_DIR/../app/mailcatcher.sqlite";
+
+if [ ! -f $DB_FILE ] ; then
+    cp "$SCRIPT_DIR/../app/mailcatcher.sqlite.dist" $DB_FILE;
+fi
+
+APP_ROOT="$SCRIPT_DIR/../";
+
+$PHP -S localhost:8080 -t "$APP_ROOT/web" "$APP_ROOT/web/index.php"
