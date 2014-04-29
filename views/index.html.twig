@@ -70,7 +70,7 @@
                         <td>{{ mail.recipient }}</td>
                         <td>{{ mail.subject }}</td>
                         <td>{{ mail.content }}</td>
-                        <td>{{ mail.sent }}</td>
+                        <td>{{ mail.sent|date("m/d/Y H:i:s") }}</td>
                     </tr>
                     {% endfor %}
 

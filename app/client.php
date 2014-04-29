@@ -22,5 +22,6 @@ $conn->insert('sent_mails', array(
     'sender'    => 'localhost',
     'recipient' => implode(', ', $parser->getTo()),
     'subject'   => $parser->getSubject(),
-    'content'   => $parser->getHTMLBody()
+    'content'   => $parser->getHTMLBody(),
+    'sent'      => time()
 ));
