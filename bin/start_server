@@ -11,8 +11,11 @@ SCRIPT_DIR=`dirname "$(readlink -f $0)"`;
 DB_FILE="$SCRIPT_DIR/../app/mailcatcher.sqlite";
 
 if [ ! -f $DB_FILE ] ; then
+    echo "Db-File does not exist. Copying from .dist file.";
     cp "$SCRIPT_DIR/../app/mailcatcher.sqlite.dist" $DB_FILE;
 fi
+
+echo "Starting application";
 
 APP_ROOT="$SCRIPT_DIR/../";
 
