@@ -1,4 +1,4 @@
-mailcatcher
+Mailcatcher
 ===========
 
 Email testing is always complicated:
@@ -16,9 +16,10 @@ Installation
 ============
 
 1. clone the project
-2. configure a vhost, document root is `web`
-3. make `app/client.php` executable
-4. uncomment the `sendmail_path` and add the mailcatcher script
+2. make `app/client.php` executable
+3. uncomment the `sendmail_path` and add the mailcatcher script
 ```
 sendmail_path = /path/to/mailcatcher/app/client.php
 ```
+4. make `bin/start_server` executable
+5. start the app `./bin/start_server`
