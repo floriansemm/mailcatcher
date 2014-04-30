@@ -12,6 +12,8 @@ This app should solve a couple of your problems:
 - easy setup
 - fancy shiny GUI
 
+Mailcatcher hooks into the `mail` function, it parsed the mail and persist all important imformations in a sqlite-db.
+
 Mailcatcher is written in PHP with Silex and Doctrine2.
 
 Installation
