@@ -69,7 +69,8 @@
                         <td>{{ loop.index }}</td>
                         <td>{{ mail.recipient }}</td>
                         <td>{{ mail.subject }}</td>
-                        <td>{{ mail.content }}</td>
+
+                        <td><iframe width="100%" height="100%" src="/content/{{ mail.rowid }}"></iframe> </td>
                         <td>{{ mail.sent|date("m/d/Y H:i:s") }}</td>
                     </tr>
                     {% endfor %}

@@ -22,10 +22,17 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 
 $app->get('/', function() use ($app) {
 
-    $sentMails = $app['db']->fetchAll("SELECT * FROM sent_mails ORDER BY sent DESC");
+    $sentMails = $app['db']->fetchAll("SELECT sm.rowid, sm.* FROM sent_mails sm ORDER BY sent DESC");
 
     return $app['twig']->render('index.html.twig', array('mails' => $sentMails));
 
+});
+
+$app->get('/content/{id}', function (Silex\Application $app, $id) {
+
+    $content = $app['db']->fetchAssoc("SELECT content FROM sent_mails WHERE rowid = ?", array($id));
+
+    return $content['content'];
 });
 
 $app->run();
