@@ -19,13 +19,13 @@ Mailcatcher is written in PHP with Silex and Doctrine2.
 Quick-Installation (PHP5.4 required)
 ====================================
 
-1. clone the project
-2. make `app/client.php` executable
-3. uncomment the `sendmail_path` and add the mailcatcher script
+- clone the project
+- make `app/client.php` executable
+- uncomment the `sendmail_path` and add the mailcatcher script
 ```
 sendmail_path = /path/to/mailcatcher/app/client.php
 ```
-4. make `bin/start_server` executable and execute `./bin/start_server`
+- make `bin/start_server` executable and execute `./bin/start_server`
 
 After this you can reach Mailcatcher under http://localhost:8080
 
