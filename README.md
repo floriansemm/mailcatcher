@@ -16,8 +16,8 @@ Mailcatcher hooks into the `mail` function, it parsed the mail and persist all i
 
 Mailcatcher is written in PHP with Silex and Doctrine2.
 
-Installation
-============
+Quick-Installation (PHP5.4 required)
+====================================
 
 1. clone the project
 2. make `app/client.php` executable
@@ -25,10 +25,13 @@ Installation
 ```
 sendmail_path = /path/to/mailcatcher/app/client.php
 ```
-4. make `bin/start_server` executable
-5. start the app `./bin/start_server` (needs PHP5.4)
+4. make `bin/start_server` executable and execute `./bin/start_server`
 
 After this you can reach Mailcatcher under http://localhost:8080
 
-For PHP5.3 you have to create a vhost in your webserver configuration. The document root must be `web`.
+
+Installation with PHP5.3
+========================
+
+Follow the steps 1-3 from above. Then you have to create a vhost in your webserver configuration. The document-root must point on `web`.
 
