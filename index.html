@@ -50,21 +50,24 @@
 <p>Mailcatcher is written in PHP with Silex and Doctrine2.</p>
 
 <h1>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h1>
+<a name="quick-installation-php54-required" class="anchor" href="#quick-installation-php54-required"><span class="octicon octicon-link"></span></a>Quick-Installation (PHP5.4 required)</h1>
 
-<ol>
+<ul>
 <li>clone the project</li>
 <li>make <code>app/client.php</code> executable</li>
 <li>uncomment the <code>sendmail_path</code> and add the mailcatcher script</li>
-</ol><pre><code>sendmail_path = /path/to/mailcatcher/app/client.php
+</ul><pre><code>sendmail_path = /path/to/mailcatcher/app/client.php
 </code></pre>
 
-<ol>
-<li>make <code>bin/start_server</code> executable</li>
-<li>start the app <code>./bin/start_server</code> (needs PHP5.4)</li>
-</ol><p>After this you can reach Mailcatcher under http://localhost:8080</p>
+<ul>
+<li>make <code>bin/start_server</code> executable and execute <code>./bin/start_server</code>
+</li>
+</ul><p>After this you can reach Mailcatcher under http://localhost:8080</p>
 
-<p>For PHP5.3 you have to create a vhost in your webserver configuration. The document root must be <code>web</code>.</p>
+<h1>
+<a name="installation-with-php53" class="anchor" href="#installation-with-php53"><span class="octicon octicon-link"></span></a>Installation with PHP5.3</h1>
+
+<p>Follow the steps 1-3 from above. Then you have to create a vhost in your webserver configuration. The document-root must point on <code>web</code>.</p>
         </section>
 
         <footer>
