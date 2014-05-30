@@ -29,7 +29,6 @@ sendmail_path = /path/to/mailcatcher/app/client.php
 
 After this you can reach Mailcatcher under http://localhost:8080
 
-
 Installation with PHP5.3
 ========================
 
