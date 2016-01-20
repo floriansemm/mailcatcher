@@ -1,4 +1,9 @@
 {
+    "name": "floriansemm/mailcatcher",
+    "type": "mailcatcher",
+    "description": "Debugging app for PHP sendmail",
+    "homepage": "http://floriansemm.github.io/mailcatcher/",
+    "license": "MIT",
     "require": {
         "silex/silex": "~1.2",
         "twig/twig": ">=1.8,<2.0-dev",
